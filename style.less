@@ -1,0 +1,71 @@
+@colors: {
+    to-do: #F5F5DC;
+    in-progress: #B5D5C5;
+    for-approval: #B08BBB;
+    testing: #ECA869;
+    done: #5BC0F8;
+}
+:root {
+    font-family: 'Spectral', serif;
+}
+.board {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+    div {
+        display: inline-block;
+        width: 20vw;
+        height: 100%;
+        outline: 2px double black;
+        text-align: center;
+        vertical-align: top;
+        h1 {
+            padding-bottom: 5%;
+            font-size: 3rem;
+            border-bottom: 2px double black;
+        }
+        button {
+            display: inline-block;
+            width: 8.5%;
+            border: 1px dashed black;
+            border-radius: 50%;
+            padding: 2%;
+        };
+        ul {
+            list-style-type: none;
+            padding: 0 3%;
+            li {
+                font-size: 1.75rem;
+                border: 2px solid grey;
+                border-radius: 3%;
+                padding: 5% 5%;
+                margin: 2% 0;
+            }
+            img {
+                display: inline-block;
+                width: 5%;
+                border: 1px solid black;
+                border-radius: 50%;
+                padding: 1%;
+                float: right;
+            } 
+        }
+    }
+    .to-do > ul > li {
+        background-color: @colors[to-do];
+    }
+    .in-progress > ul > li {
+        background-color: @colors[in-progress];
+    }
+    .for-approval > ul > li {
+        background-color: @colors[for-approval];
+    }
+    .testing > ul > li {
+        background-color: @colors[testing];
+    }
+    .done > ul > li {
+        background-color: @colors[done];
+    }
+}
+    
+        
